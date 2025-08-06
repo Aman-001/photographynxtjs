@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "motion/react";
 
-
-
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -109,13 +107,13 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { children: React.ReactNode }) => {
   return (
     <a
       {...rest}
       className="text-neutral-700 dark:text-neutral-200 hover:text-neutral-400 "
     >
       {children}
-    </a>
-  );
+    </a>
+  );
 };
